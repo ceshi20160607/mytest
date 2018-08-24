@@ -11,6 +11,11 @@ export default new Router({
       component: require('@/components/LandingPage').default
     },
     {
+      path: '/sb',
+      name: 'sb-page',
+      component: require('@/components/SbPage').default
+    },
+    {
       path: '*',
       redirect: '/'
     }

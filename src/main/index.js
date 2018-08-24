@@ -65,15 +65,20 @@ app.on('ready', () => {
   if (process.env.NODE_ENV === 'production') autoUpdater.checkForUpdates()
 })
  */
-//-----------------------------------------------------------------
-//监听与渲染进程的通信
+// -----------------------------------------------------------------
+// 监听与渲染进程的通信
 ipcMain.on('reqaction', (event, arg) => {
-  switch(arg){
+  switch (arg) {
     case 'openNew':
-      //做点其它操作：比如记录窗口大小、位置等，下次启动时自动使用这些设置；不过因为这里（主进程）无法访问localStorage，这些数据需要使用其它的方式来保存和加载，这里就不作演示了。这里推荐一个相关的工具类库，可以使用它在主进程中保存加载配置数据：https://github.com/sindresorhus/electron-store
-      //...
-      createWindow();
-      break;
+      // 做点其它操作：比如记录窗口大小、位置等，下次启动时自动使用这些设置；不过因为这里（主进程）无法访问localStorage，这些数据需要使用其它的方式来保存和加载，这里就不作演示了。这里推荐一个相关的工具类库，可以使用它在主进程中保存加载配置数据：https://github.com/sindresorhus/electron-store
+      // ...
+      console.log('*******')
+      createWindow()
+      // break
   }
-});
-//-----------------------------------------------------------------
+})
+// ipcMain.on('openNew',function () {
+//   console.log('*******')
+//   createWindow()
+// })
+// -----------------------------------------------------------------

@@ -3,7 +3,7 @@
     <img id="logo" src="~@/assets/logo.png" alt="electron-vue">
       <excel></excel>
       <!-- <button @click="showNew">aaaaa</button> -->
-      <router-link to="/sb">sb</router-link>
+      <router-link to="/">Home</router-link>
     <main>
       <div class="left-side">
         <span class="title">
@@ -34,8 +34,8 @@
 </template>
 
 <script>
-  import SystemInformation from './LandingPage/SystemInformation'
-  import excel from './LandingPage/excel'
+  import SystemInformation from './SbPage/SystemInformation'
+  import excel from './SbPage/excel'
   // const add = document.querySelector('#add')
   const ipc = require('electron').ipcRenderer
   // add.onclick = function () {
